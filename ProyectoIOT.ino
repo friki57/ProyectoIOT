@@ -7,7 +7,7 @@ const int PinesSensores[4][2] = {
     {D4,D5},
     {D6,D7}
   };
-
+/*
 NewPing sensores[] = {
   NewPing(1, 2, 3),
   NewPing(3, 4, 3),
@@ -16,23 +16,42 @@ NewPing sensores[] = {
 };
 
 int numeroSensores = sizeof(PinesSensores)/sizeof(PinesSensores[0]);
+*/
+  NewPing Sensor1(PinesSensores[0][0],PinesSensores[0][1],distanciaMaxima);
+  NewPing Sensor2(PinesSensores[1][0],PinesSensores[1][1],distanciaMaxima);
+  NewPing Sensor3(PinesSensores[2][0],PinesSensores[2][1],distanciaMaxima);
+  NewPing Sensor4(PinesSensores[3][0],PinesSensores[3][1],distanciaMaxima);
 void setup() {
   Serial.begin(9600);
+  Serial.println("Inicio");
+  //Serial.println(String(PinesSensores[0][0]));
+  /*
   for (int i = 0; i < numeroSensores; i++)
   {
     sensores[i] = NewPing(PinesSensores[i][0], PinesSensores[i][1], distanciaMaxima);
   }
+  */
 }
 
 void loop() {
-  delay(1000);
+  delay(2000);
+  Serial.println("...");
+  int medida = -1;
+  medida = Sensor1.ping_median();
+  Serial.print("Distancia: ");
+  Serial.print(String(medida) + " " + String(medida/US_ROUNDTRIP_CM));
+  Serial.println("cm");
+  medida = -1;
+  medida = Sensor2.ping_median();
+  Serial.print("Distancia: ");
+  Serial.print(String(medida) + " " + String(medida/US_ROUNDTRIP_CM));
+  Serial.println("cm");
+  /*
   int medidas[numeroSensores];
   memset( medidas, 0, numeroSensores);
   for (int i = 0; i < numeroSensores; i++)
   {
-    medidas[i] = sensores[i].ping_median();
-    Serial.print("Distancia: ");
-    Serial.print(String(medidas[i]));
-    Serial.println("cm");
+    
   }
+  */
 }
