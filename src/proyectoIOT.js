@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 
 //Conexion BD
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/IOTTemperatura')
+mongoose.connect('mongodb://localhost/proyectoIOT')
 .then(db => console.log('db connected'))
 .catch(err => console.log(err));
 
@@ -15,7 +15,7 @@ bd.iniciar();
 
 var app = express();
 
-var puerto = process.env.PORT || "4000";
+var puerto = process.env.PORT || "3000";
 
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
@@ -52,14 +52,33 @@ rutas.get("/refrescar",(req,res)=>
 // 	delete a["__v"];
 // 	bd.cruds.crudTemperatura.ingresar(a,()=>{});
 // })
-
-rutas.post("/Post",(req,res)=>
+  //req.query.hora = (new Date()).toString();
+var espacios = [];
+rutas.post("/Post/:piso/",(req,res)=>
 {
-  req.query.hora = (new Date()).toString();
-  console.log("Me llegaron estos datos:", req.query);
-  bd.cruds.crudTemperatura.ingresar(req.query, ()=>{})
+  var piso = req.params.piso;
+  var uno = req.query.uno;
+  var dos = req.query.dos;
+  var incluye = false;
+  espacios.map(a=>
+  {
+    if(a.piso == piso)
+    {
+      incluye = true;
+    }
+  });
+  if(incluye!=true)
+  {
+    espacios.push({
+      piso,
+      uno,
+      dos
+    })
+  }
+  console.log("Me llegaron estos datos:", req.query, "del piso:",piso);
+  //bd.cruds.crudTemperatura.ingresar(req.query, ()=>{})
   res.send("Gracias, ya me llegaron los datos")
-})
+});
 
 app.use(rutas)
 app.listen(80, '104.129.131.178', ()=>

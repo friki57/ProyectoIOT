@@ -1,6 +1,6 @@
 #include <NewPing.h>
 #define distanciaMaxima 200
-
+const int piso = 1;
 const int PinesSensores[4][2] = {
     {D0,D1},
     {D2,D3},
@@ -34,18 +34,21 @@ void setup() {
 }
 
 void loop() {
-  delay(2000);
+  delay(5000);
   Serial.println("...");
   int medida = -1;
   medida = Sensor1.ping_median();
   Serial.print("Distancia: ");
   Serial.print(String(medida) + " " + String(medida/US_ROUNDTRIP_CM));
   Serial.println("cm");
+  int medida1 = medida;
   medida = -1;
   medida = Sensor2.ping_median();
   Serial.print("Distancia: ");
   Serial.print(String(medida) + " " + String(medida/US_ROUNDTRIP_CM));
   Serial.println("cm");
+  int medida2 = medida;
+  POST(String(medida1),String(medida2),String(piso));
   /*
   int medidas[numeroSensores];
   memset( medidas, 0, numeroSensores);

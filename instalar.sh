@@ -5,7 +5,7 @@
 pm2 stop proyectoIOT
 rm proyectoIOT -r
 git clone https://github.com/friki57/proyectoIOT.git
-cd IOTTemperatura
+cd proyectoIOT
 npm i
 pm2 start src/proyectoIOT.js
 
