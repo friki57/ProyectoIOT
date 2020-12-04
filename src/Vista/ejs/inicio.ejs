@@ -11,7 +11,7 @@
 		<p><span id="P2Uno"></span><span id="P2Dos"></span></p>
 		<p><span id="P3Uno"></span><span id="P3Dos"></span></p>
 		<script>
-			var socket = io();
+			var socket = io("http://104.129.131.178/");
 			socket.on("espacios",(espacios)=>
 			{
 				console.log(espacios)

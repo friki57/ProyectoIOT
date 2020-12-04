@@ -1,6 +1,6 @@
 #include <NewPing.h>
 #define distanciaMaxima 200
-const int piso = 1;
+const int piso = 2;
 const int PinesSensores[4][2] = {
     {D0,D1},
     {D2,D3},
