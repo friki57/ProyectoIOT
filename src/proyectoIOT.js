@@ -15,6 +15,9 @@ bd.iniciar();
 
 var app = express();
 
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
 var puerto = process.env.PORT || "3000";
 
 app.use(morgan('dev'));
@@ -94,9 +97,18 @@ rutas.post("/Post/:piso/",(req,res)=>
   res.send("Gracias, ya me llegaron los datos")
 });
 
+io.on('connection', function(socket) {
+  console.log('Alguien se ha conectado con Sockets');
+});
+setInterval(()=>
+{
+  io.sockets.emit('espacios', espacios);
+},2000)
+
+
 app.use(rutas)
-app.listen(80, '104.129.131.178', ()=>
-//app.listen(puerto, ()=>
+server.listen(80, '104.129.131.178', ()=>
+//server.listen(puerto, ()=>
 {
   console.log("Servidor lanzado en el puerto:",puerto);
 });
