@@ -33,9 +33,7 @@ app.use((req, res, next) => {
 const rutas = express.Router();
 rutas.get("/",(req,res)=>
 {
-  res.render('inicio', {
-    datos
-  });
+  res.render('inicio');
 });
 
 rutas.get("/espacios",(req,res)=>
