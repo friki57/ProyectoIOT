@@ -11,7 +11,7 @@
 		<p><span id="P2Uno"></span><span id="P2Dos"></span></p>
 		<p><span id="P3Uno"></span><span id="P3Dos"></span></p>
 		<script>
-			var socket = io("http://localhost/");
+			var socket = io.connect("http://localhost:80/");
 			socket.on("espacios",(espacios)=>
 			{
 				console.log(espacios)
