@@ -16,7 +16,7 @@ bd.iniciar();
 var app = express();
 
 var server = require('http').Server(app);
-var io = require('../lib/socket.io').(server);
+var io = require('../lib/socket.io')(server);
 
 var puerto = process.env.PORT || "3000";
 
