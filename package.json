@@ -4,8 +4,8 @@
   "description": "",
   "main": "temperatura.js",
   "scripts": {
-    "test": "nodemon src/temperatura.js",
-    "start": "node src/temperatura.js"
+    "test": "nodemon src/proyectoIOT.js",
+    "start": "node src/proyectoIOT.js"
   },
   "repository": {
     "type": "git",
