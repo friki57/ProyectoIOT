@@ -103,6 +103,7 @@ io.on('connection', function(socket) {
 setInterval(()=>
 {
   io.sockets.emit('espacios', espacios);
+  console.log("enviando");
 },2000)
 
 
