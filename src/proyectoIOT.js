@@ -75,6 +75,23 @@ rutas.post("/Post/:piso/",(req,res)=>
       dos
     })
   }
+  else
+  {
+    if(espacios.length>0)
+    {
+      var indice = 0;
+    espacios.map((a,i)=>
+    {
+      if(a.piso == piso)
+        indice = i;
+    })
+    espacios[i] = {
+      piso,
+      uno,
+      dos
+    }
+    }
+  }
   console.log("Me llegaron estos datos:", req.query, "del piso:",piso);
   console.log("Pisos",espacios)
   //bd.cruds.crudTemperatura.ingresar(req.query, ()=>{})
