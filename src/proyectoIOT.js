@@ -85,7 +85,7 @@ rutas.post("/Post/:piso/",(req,res)=>
       if(a.piso == piso)
         indice = i;
     })
-    espacios[i] = {
+    espacios[indice] = {
       piso,
       uno,
       dos
