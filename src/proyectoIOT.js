@@ -76,6 +76,7 @@ rutas.post("/Post/:piso/",(req,res)=>
     })
   }
   console.log("Me llegaron estos datos:", req.query, "del piso:",piso);
+  console.log("Pisos",espacios)
   //bd.cruds.crudTemperatura.ingresar(req.query, ()=>{})
   res.send("Gracias, ya me llegaron los datos")
 });
