@@ -26,4 +26,7 @@ export default {
     USERPAS: require ('../../../assets/UserPastores.jpg'),
     USERRES: require ('../../../assets/UserRes.jpg'),
     USERPERFIL: require('../../../assets/UserMiPerfil.jpg'),
+    HAYAUTO: require('../../../assets/Auto-rojo.png'),
+    NOHAYAUTO: require('../../../assets/Auto-verde.png'),
+    LINE: require('../../../assets/line.png')
 }
