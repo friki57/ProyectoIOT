@@ -9,7 +9,7 @@ import ButtonFooter from '../../Components/Onboarding/Button';
 const HomeScreenInicio = ({navigation}) => {
   console.disableYellowBox = true;
   return (
-    <ImageBackground source={Images.IMGFONDO3} style={{ width: '100%', height: '100%' }}>
+    <ImageBackground source={Images.VISTA1} style={{ width: '100%', height: '100%' }}>
       <View style={styles.container}>
         <Descripcion
           Titulo={Constans.STRING.TITULOHOME}

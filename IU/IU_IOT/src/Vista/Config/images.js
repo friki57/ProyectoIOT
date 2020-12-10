@@ -28,5 +28,9 @@ export default {
     USERPERFIL: require('../../../assets/UserMiPerfil.jpg'),
     HAYAUTO: require('../../../assets/Auto-rojo.png'),
     NOHAYAUTO: require('../../../assets/Auto-verde.png'),
-    LINE: require('../../../assets/line.png')
+    LINE: require('../../../assets/line.png'),
+    VISTA1: require('../../../assets/Vista1.jpg'),
+    VISTA2: require('../../../assets/Vista2.jpg'),
+    VISTA3: require('../../../assets/Vista3.jpg'),
+    SPLASFLOOR: require('../../../assets/SplashFloor.jpg'),
 }

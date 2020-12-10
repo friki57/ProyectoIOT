@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, Alert, Button, Image } from 'react-native';
+import { View, Text, Alert, Button, Image, ImageBackground } from 'react-native';
 import Images from '../../Config/images'
 
 var contador = 0;
@@ -38,7 +38,7 @@ export default class Pruebas extends Component {
                 estado_sensor2: "NO DISPONIBLE"
             }));
         }
-        
+
 
 
     }
@@ -46,21 +46,27 @@ export default class Pruebas extends Component {
 
 
         return (
-            <View style={{ flex: 1, justifyContent: "center", alignItems: 'center' }}>
-                <Image source={Images.LINE} style={{ height: 30}}></Image>
-                <View>
-                    <Image source={this.state.imagen_sensor1} style={{ height: 200, width: 350 }} ></Image>
-                    <Text>{this.state.estado_sensor1}</Text>
+            <ImageBackground  source={Images.SPLASFLOOR} style={{ width: '100%', height: '100%' }}>
+                <View style={{ flex: 1, justifyContent: "center", alignItems: 'center' }}>
+                    <Image source={Images.LINE} style={{ height: 30 }}></Image>
+                    <View>
+                        <Image source={this.state.imagen_sensor1} style={{ height: 200, width: 350 }} ></Image>
+                        <Text>{this.state.estado_sensor1}</Text>
+                    </View>
+                    <Image source={Images.LINE} style={{ height: 30 }}></Image>
+                    <View>
+                        <Image source={this.state.imagen_sensor2} style={{ height: 200, width: 350 }} ></Image>
+                        <Text>{this.state.estado_sensor2}</Text>
+                    </View>
+                    <Image source={Images.LINE} style={{ height: 30 }}></Image>
+                    
                 </View>
-                <Image source={Images.LINE} style={{height: 30}}></Image>
-                <View>
-                    <Image source={this.state.imagen_sensor2} style={{ height: 200, width: 350 }} ></Image>
-                    <Text>{this.state.estado_sensor2}</Text>
-                </View>
-                <Image source={Images.LINE} style={{height: 30}}></Image>
-                <Text>{this.state.valorprueba} </Text>
-                <Button onPress={this._onPress} title="Hola"></Button>
-            </View>
+              
+            </ImageBackground>
         );
     }
 }
+/*
+  <Text>{this.state.valorprueba} </Text>
+                    <Button onPress={this._onPress} title="Hola"></Button>
+*/

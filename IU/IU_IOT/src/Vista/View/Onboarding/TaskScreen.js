@@ -10,7 +10,7 @@ import Onboarding from '../../Components/Onboarding/OnboardingFactory';
 const FormRegScreen = ({ navigation, route }) => {
     console.disableYellowBox = true;
     return (
-        <ImageBackground source={Images.IMGFONDO2} style={{ width: '100%', height: '100%' }}>
+        <ImageBackground source={Images.VISTA3} style={{ width: '100%', height: '100%' }}>
         <View style={styles.container}>
             <Onboarding
             //source={Images.FONDO2}

@@ -10,10 +10,10 @@ import Onboarding from '../../Components/Onboarding/OnboardingFactory';
 const FormRegScreen = ({ navigation }) => {
     console.disableYellowBox = true;
     return (
-        <ImageBackground source={Images.IMGFONDO1} style={{ width: '100%', height: '100%' }}>
+        <ImageBackground source={Images.VISTA2} style={{ width: '100%', height: '100%' }}>
             <View style={styles.container}>
                 <Onboarding
-                    //source={Images.FONDO1}
+                    //source={Images.FONDO1} esta es la Vista 2
                     Titulo={Constants.STRING.TITULO2}
                     Contenido={Constants.STRING.CONTENIDO2}
                     onPressPrev={() => { navigation.navigate('Inicio');}}

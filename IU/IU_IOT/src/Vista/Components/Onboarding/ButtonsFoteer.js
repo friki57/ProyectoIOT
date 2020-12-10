@@ -7,7 +7,7 @@ import Button from '../Onboarding/Button';
 
 const ButtonInput = ({ onPressPrev, onPressNext }) => {
     return (
-        <View >
+        <View style={styles.container}>
             <View style={styles.butonPrev}>
                 <Button
                     onPress={onPressPrev}
@@ -22,6 +22,9 @@ const ButtonInput = ({ onPressPrev, onPressNext }) => {
     );
 };
 const styles = StyleSheet.create({
+    container:{
+        marginTop:80,
+    },
     butonPrev: {
         alignItems: 'flex-start',
         position: 'absolute',

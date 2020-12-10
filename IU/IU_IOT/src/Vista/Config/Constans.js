@@ -51,14 +51,14 @@ const strings = {
 
     NETX: 'Next',
     PREV: 'Prev',
-    TITULOHOME: 'Bienvenido',
-    CONTENIDOHOME: 'Esta es la Aplicacion Movil de Iglesias UCE',
+    TITULOHOME: 'BIENVENIDO',
+    CONTENIDOHOME: 'Esta es la Aplicacion Asistente de DASH ELECTRONICS',
     TITULO1: 'Bienvenido',
-    TITULO2: 'UCE',
-    TITULO3: 'App Web',
+    TITULO2: 'INFORMACION',
+    TITULO3: 'DISPONIBILIDAD',
     CONTENIDO1: 'Esta es la Aplicacion Movil de Iglesias UCE',
-    CONTENIDO2: 'Mas de 1000 iglesias forman parte de nosotros',
-    CONTENIDO3: 'Tambien puedes ingresar desde tu navegador en ISP.UCE.xyz',
+    CONTENIDO2: 'Informate de espacios disponibles de estacionamiento en la Empresa',
+    CONTENIDO3: 'De uso libre para todos los empleados de la Empresa',
 }
 export default {
     CONFIG: config,
